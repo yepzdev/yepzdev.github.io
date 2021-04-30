@@ -1,0 +1,47 @@
+div.container {
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: 0 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "header     header      header"
+    "myname     myname      myname"
+    "about      about       about"
+    "projects   projects    projects"
+    "other      other       other"
+    "contact    contact     contact"
+    "footer     footer      footer";
+
+  header {
+    grid-area: header;
+  }
+
+  article.myname {
+    grid-area: myname;
+  }
+
+  section {
+    &.about {
+      grid-area: about;
+    }
+
+    &.projects {
+      grid-area: projects;
+    }
+
+    &.other {
+      grid-area: other;
+    }
+
+    &.contact {
+      grid-area: contact;
+    }
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}

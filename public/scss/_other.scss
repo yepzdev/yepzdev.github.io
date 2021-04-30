@@ -1,0 +1,23 @@
+section.other {
+  background-color: white;
+  border-radius: 10px;
+  grid-area: about;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  figure {
+    padding: 10px;
+    margin: 20px;
+    width: 500px;
+    text-align: center;
+  }
+
+  article {
+    padding: 20px;
+    h2 {
+      padding: 20px 0;
+      font-size: 2.3rem;
+    }
+  }
+}

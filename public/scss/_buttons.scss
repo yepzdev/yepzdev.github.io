@@ -1,0 +1,20 @@
+
+// Get in touch Button
+//==========================================================================================================
+
+a.btn-touch {
+    text-decoration: none;
+    padding: 10px;
+    margin: 0px 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #a4ced1;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+  
+    &:hover {
+      background-color: #6ba7ac;
+    }
+  }
