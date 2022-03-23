@@ -10,7 +10,8 @@ div.container {
     "header     header      header"
     "myname     myname      myname"
     "about      about       about"
-    "projects   projects    projects"
+    "mopaviv    mopaviv     mopaviv"
+    "empaque    empaque     empaque"
     "other      other       other"
     "contact    contact     contact"
     "footer     footer      footer";
@@ -28,8 +29,12 @@ div.container {
       grid-area: about;
     }
 
-    &.projects {
-      grid-area: projects;
+    &.mopaviv {
+      grid-area: mopaviv;
+    }
+
+    &.empaque {
+      grid-area: empaque;
     }
 
     &.other {
