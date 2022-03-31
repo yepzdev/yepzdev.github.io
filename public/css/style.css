@@ -22,7 +22,7 @@ div.container {
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "header     header      header" "myname     myname      myname" "about      about       about" "mopaviv    mopaviv     mopaviv" "empaque    empaque     empaque" "other      other       other" "contact    contact     contact" "footer     footer      footer";
+  grid-template-areas: "header     header      header" "myname     myname      myname" "about      about       about" "mopaviv    mopaviv     mopaviv" "empaque    empaque     empaque" "shop       shop        shop   " "foro       foro        foro" "blog       blog        blog" "contact    contact     contact" "footer     footer      footer";
 }
 div.container header {
   grid-area: header;
@@ -39,8 +39,14 @@ div.container section.mopaviv {
 div.container section.empaque {
   grid-area: empaque;
 }
-div.container section.other {
-  grid-area: other;
+div.container section.shop {
+  grid-area: shop;
+}
+div.container section.foro {
+  grid-area: foro;
+}
+div.container section.blog {
+  grid-area: blog;
 }
 div.container section.contact {
   grid-area: contact;

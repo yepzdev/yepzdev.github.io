@@ -12,7 +12,9 @@ div.container {
     "about      about       about"
     "mopaviv    mopaviv     mopaviv"
     "empaque    empaque     empaque"
-    "other      other       other"
+    "shop       shop        shop   "
+    "foro       foro        foro"
+    "blog       blog        blog"
     "contact    contact     contact"
     "footer     footer      footer";
 
@@ -36,11 +38,18 @@ div.container {
     &.empaque {
       grid-area: empaque;
     }
-
-    &.other {
-      grid-area: other;
+    &.shop {
+      grid-area: shop;
     }
 
+    &.foro {
+      grid-area: foro;
+    }
+
+    &.blog {
+      grid-area: blog;
+    }
+    
     &.contact {
       grid-area: contact;
     }
