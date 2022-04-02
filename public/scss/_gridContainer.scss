@@ -10,6 +10,7 @@ div.container {
     "header     header      header"
     "myname     myname      myname"
     "about      about       about"
+    "project    project     project"
     "mopaviv    mopaviv     mopaviv"
     "empaque    empaque     empaque"
     "shop       shop        shop   "
@@ -29,6 +30,10 @@ div.container {
   section {
     &.about {
       grid-area: about;
+    }
+
+    &.project {
+      grid-area: project;
     }
 
     &.mopaviv {

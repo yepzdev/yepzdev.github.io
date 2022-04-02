@@ -1,7 +1,7 @@
 section.projects {
   background-color: white;
   border-radius: 10px;
-  grid-area: about;
+  // grid-area: about;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,20 +14,41 @@ section.projects {
   }
 
   article {
-    text-align: center;
+    // text-align: center;
     padding: 20px;
     h2 {
       padding: 20px 0;
       font-size: 2.3rem;
+      text-align: center;
     }
 
     h3 {
       margin-top: 20px;
+      text-align: center;
     }
 
     img {
       border-radius: 20px;
       border: 2.5px solid #E5E8E8 ;
+    }
+    p {
+      text-align: center;
+    }
+
+    p:nth-child(6){
+      display:inline;
+      // text-align: left;
+    }
+
+    p:nth-child(7){
+      display:inline;
+      // text-align: left;
+    }
+    
+    p:last-child {
+      color: $second-color;
+      // display:inline;
+      text-align: left;
     }
   }
 }

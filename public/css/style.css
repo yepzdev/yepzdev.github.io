@@ -22,7 +22,7 @@ div.container {
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "header     header      header" "myname     myname      myname" "about      about       about" "mopaviv    mopaviv     mopaviv" "empaque    empaque     empaque" "shop       shop        shop   " "foro       foro        foro" "blog       blog        blog" "contact    contact     contact" "footer     footer      footer";
+  grid-template-areas: "header     header      header" "myname     myname      myname" "about      about       about" "project    project     project" "mopaviv    mopaviv     mopaviv" "empaque    empaque     empaque" "shop       shop        shop   " "foro       foro        foro" "blog       blog        blog" "contact    contact     contact" "footer     footer      footer";
 }
 div.container header {
   grid-area: header;
@@ -32,6 +32,9 @@ div.container article.myname {
 }
 div.container section.about {
   grid-area: about;
+}
+div.container section.project {
+  grid-area: project;
 }
 div.container section.mopaviv {
   grid-area: mopaviv;
@@ -68,7 +71,7 @@ header .navbar {
   justify-content: space-around;
   overflow: hidden;
 }
-header .navbar h2 {
+header .navbar h3 {
   margin: auto 0;
 }
 header .navbar a {
@@ -99,7 +102,7 @@ header .navbar a:hover {
   padding: 20px;
   margin: auto 0;
 }
-.myname h3 {
+.myname h1 {
   padding: 0 20px;
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -124,7 +127,7 @@ section.about figure img {
   padding: 20px;
 }
 section.about figure figcaption {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 section.about article {
   padding: 20px;
@@ -133,7 +136,7 @@ section.about article {
 section.about article h2 {
   text-align: center;
   padding: 20px 0;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
 }
 section.about article ul {
   padding-left: 30px;
@@ -164,10 +167,19 @@ section.about article ul {
     font-size: 2.3rem;
   }
 }
+section.project {
+  background-color: white;
+  border-radius: 10px;
+}
+section.project h2 {
+  padding: 20px 0;
+  font-size: 2.3rem;
+  text-align: center;
+}
+
 section.projects {
   background-color: white;
   border-radius: 10px;
-  grid-area: about;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,19 +191,33 @@ section.projects figure {
   text-align: center;
 }
 section.projects article {
-  text-align: center;
   padding: 20px;
 }
 section.projects article h2 {
   padding: 20px 0;
   font-size: 2.3rem;
+  text-align: center;
 }
 section.projects article h3 {
   margin-top: 20px;
+  text-align: center;
 }
 section.projects article img {
   border-radius: 20px;
   border: 2.5px solid #E5E8E8;
+}
+section.projects article p {
+  text-align: center;
+}
+section.projects article p:nth-child(6) {
+  display: inline;
+}
+section.projects article p:nth-child(7) {
+  display: inline;
+}
+section.projects article p:last-child {
+  color: #888;
+  text-align: left;
 }
 
 section.other {
