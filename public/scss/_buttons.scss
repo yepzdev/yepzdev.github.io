@@ -18,3 +18,11 @@ a.btn-touch {
       background-color: #6ba7ac;
     }
   }
+
+// hamburger button
+
+@media screen and (min-width: 769px) {
+  button.panel-btn.hamburger {
+    display: none;
+  }
+}
