@@ -144,16 +144,22 @@ section.about figure .social-media-icons {
   width: 70%;
   height: 3rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   margin: auto;
   margin-top: 1.2rem;
+}
+section.about figure hr {
+  width: 80%;
+  margin: auto;
 }
 
 .social-media-icons a {
   color: #454135;
+  margin: 0px 20px;
 }
 .social-media-icons a i {
   color: inherit;
+  font-size: 54px;
 }
 
 article.about-me {

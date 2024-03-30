@@ -30,9 +30,14 @@ section.about {
       width: 70%;
       height: 3rem;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       margin: auto;
       margin-top: 1.2rem;
+    }
+
+    hr {
+      width: 80%;
+      margin: auto;
     }
   }
 }
@@ -40,10 +45,12 @@ section.about {
 .social-media-icons {
   a {
     color: $main-color;
+    margin: 0px 20px;
   }
 
   a i {
     color: inherit;
+    font-size: 54px;
   }
 }
 
