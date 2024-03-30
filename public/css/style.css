@@ -138,26 +138,44 @@ section.about figure h4.skill-stack {
   width: 80%;
   margin-top: 1rem;
 }
-section.about article.about-me {
+section.about figure .social-media-icons {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 1.2rem;
+}
+
+.social-media-icons a {
+  color: #454135;
+}
+.social-media-icons a i {
+  color: inherit;
+}
+
+article.about-me {
   padding: 20px;
   padding-bottom: 20px;
 }
-section.about article.about-me h2 {
+article.about-me h2 {
   text-align: center;
   padding: 20px 0;
   font-size: 2.3rem;
 }
-section.about article.about-me p {
-  width: 80%;
+article.about-me p {
+  width: 90%;
   margin: auto;
   text-align: center;
 }
-section.about article.about-me .btn-touch {
+article.about-me .btn-touch {
   margin-top: 1rem;
   width: 85%;
   text-align: center;
 }
-section.about article.about-me ul {
+article.about-me ul {
   padding-left: 30px;
   margin-bottom: 20px;
 }
