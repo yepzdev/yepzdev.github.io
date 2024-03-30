@@ -8,7 +8,6 @@ div.container {
   grid-template-rows: repeat(2, auto);
   grid-template-areas:
     "header     header      header"
-    "myname     myname      myname"
     "about      about       about"
     "project    project     project"
     "mopaviv    mopaviv     mopaviv"
@@ -21,10 +20,6 @@ div.container {
 
   header {
     grid-area: header;
-  }
-
-  article.myname {
-    grid-area: myname;
   }
 
   section {
