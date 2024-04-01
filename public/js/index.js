@@ -31,3 +31,30 @@ function progress() {
     document.querySelector("header").classList.remove("box-shadow");
   }
 }
+
+// change about for my name HARCODED THIS IS BAD !!!
+const mediaQuery = window.matchMedia('( min-width: 768px )');
+
+// get collection of .about-me element
+let aboutMe = document.getElementsByClassName("about-me")[0];
+
+if ( mediaQuery.matches ) {
+  // set my name
+  aboutMe.firstElementChild.innerHTML = "Jesús Alfredo Yepez";
+
+  // also create h4 element
+  let stackSkills = document.createElement("h4");
+  // add class
+  stackSkills.classList.add('skill-stacks', 'roboto-thin');
+  // set stacks 
+  stackSkills.innerHTML = `<strong>Backend Developer |</strong> HTML, CSS, JavaScript, JQuery, PHP, Laravel, Drupal`;
+
+  // get reference h2 about me
+  let h2 = document.querySelector(".about-me h2");
+
+  console.log(stackSkills);
+
+  // insert new element after element h2
+  h2.insertAdjacentElement("afterend", stackSkills);
+
+}

@@ -95,12 +95,47 @@ article.about-me {
       width: 90%;
       margin: 0 auto;
       padding: 20px;
+
+      div.social-media-icons {
+        margin-top: 0.9rem;
+      }
+    }
+
+    img {
+      padding: 0;
+      margin-top: 0;
+      width: 90%;
+    }
+
+    figcaption, hr, h4.skill-stack {
+      display: none;
     }
 
     article {
       h2 {
         padding: 20px 0;
-        font-size: 2.3rem;
+        font-size: 2.4rem;
+        text-align: left;
+      }
+
+      h4.skill-stacks {
+        margin-bottom: 1rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        strong {
+          color: #54858c;
+        }
+      }
+
+      p {
+        text-align: left;
+        margin:auto 0;
+      }
+
+      a.btn-touch {
+        margin-left: 0;
       }
 
       padding: 10px;
