@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speak Spanish Naturally | 1-on-1 Online Coaching</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #18181b;
+      --muted: #52525b;
+      --accent: #2563eb;
+      --card-bg: #ffffff;
+      --border: #e4e4e7;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 2rem 1.25rem;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .video-placeholder {
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      margin: 2rem 0;
+      cursor: pointer;
+    }
+
+    .pricing-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .plan-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .plan-card.featured {
+      border: 2px solid var(--accent);
+    }
+
+    .price {
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .testimonials-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonials-header h2 {
+      margin: 0;
+    }
+
+    .carousel-controls {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .carousel-btn {
+      background: var(--card-bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 38px;
+      height: 38px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .carousel-btn:hover {
+      border-color: var(--accent);
+      background: #f4f4f5;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      /* Oculta scrollbar en Firefox */
+      padding-bottom: 0.25rem;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+      /* Oculta scrollbar en Chrome/Safari/Edge */
+    }
+
+    .testimonial-card {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .testimonial-card p {
+      margin: 0 0 0.85rem 0;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-style: normal;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .testimonial-author strong {
+      color: var(--text);
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.85rem;
+    }
+
+    .carousel-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: none;
+      background: #d4d4d8;
+      padding: 0;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .carousel-dot.active {
+      background: var(--accent);
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- 1. HERO -->
+    <section>
+      <div class="hero-header">
+        <img src="foto-perfil.jpg" alt="Tu nombre — Spanish tutor" class="avatar">
+        <div>
+          <h1>Speak Spanish with confidence in 90 days—without memorizing boring grammar tables.</h1>
+        </div>
+      </div>
+      <!-- <h1>Speak Spanish with confidence in 90 days—without memorizing boring grammar tables.</h1> -->
+      <p class="subtitle">Personalized 1-on-1 conversation & fluency coaching tailored to your real-life goals.</p>
+      <div class="video-placeholder" id="video-box">▶ Watch 60-sec intro</div>
+      <a href="#plans" class="btn">See Monthly Plans</a>
+    </section>
+
+    <!-- 2. BENEFICIOS -->
+    <section>
+      <h2>How our sessions work</h2>
+      <ul>
+        <li><strong>80% Talking Time:</strong> Practical conversation from day one.</li>
+        <li><strong>Zero Prep Needed:</strong> Custom notes and vocabulary sent after every class.</li>
+        <li><strong>Flexible Rescheduling:</strong> Move any session with 12 hours' notice.</li>
+      </ul>
+    </section>
+
+    <!-- 3. TESTIMONIOS -->
+    <section id="testimonials">
+      <style>
+        .testimonials-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .testimonials-header h2 {
+          margin: 0;
+        }
+
+        .carousel-controls {
+          display: flex;
+          gap: 0.5rem;
+        }
+
+        .carousel-btn {
+          background: var(--card-bg);
+          color: var(--text);
+          border: 1px solid var(--border);
+          border-radius: 8px;
+          width: 38px;
+          height: 38px;
+          font-size: 1.1rem;
+          cursor: pointer;
+          display: grid;
+          place-items: center;
+          transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        .carousel-btn:hover {
+          border-color: var(--accent);
+          background: #f4f4f5;
+        }
+
+        .carousel-track {
+          display: flex;
+          gap: 1rem;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          scrollbar-width: none;
+          /* Oculta scrollbar en Firefox */
+          padding-bottom: 0.25rem;
+        }
+
+        .carousel-track::-webkit-scrollbar {
+          display: none;
+          /* Oculta scrollbar en Chrome/Safari/Edge */
+        }
+
+        .testimonial-card {
+          flex: 0 0 100%;
+          scroll-snap-align: start;
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.5rem;
+          box-sizing: border-box;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+        }
+
+        .testimonial-img {
+          width: 84px;
+          height: 84px;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center top;
+          /* Ayuda a que no se recorte la cabeza/ojos */
+          border: 1px solid var(--border);
+          flex-shrink: 0;
+        }
+
+        .testimonial-content {
+          flex: 1;
+          min-width: 0;
+        }
+
+        .testimonial-card p {
+          margin: 0 0 0.75rem 0;
+          font-style: italic;
+        }
+
+        .testimonial-author {
+          font-style: normal;
+          font-size: 0.95rem;
+          color: var(--muted);
+        }
+
+        .testimonial-author strong {
+          color: var(--text);
+        }
+
+        .carousel-dots {
+          display: flex;
+          justify-content: center;
+          gap: 0.5rem;
+          margin-top: 0.85rem;
+        }
+
+        .carousel-dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          border: none;
+          background: #d4d4d8;
+          padding: 0;
+          cursor: pointer;
+          transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .carousel-dot.active {
+          background: var(--accent);
+          transform: scale(1.2);
+        }
+
+        /* En pantallas pequeñas, la imagen va arriba y se centra */
+        @media (max-width: 540px) {
+          .testimonial-card {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .testimonial-img {
+            width: 72px;
+            height: 72px;
+          }
+        }
+      </style>
+
+      <div class="testimonials-header">
+        <h2>What students say</h2>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-btn" id="prev-testimonial" aria-label="Previous testimonial">‹</button>
+          <button type="button" class="carousel-btn" id="next-testimonial" aria-label="Next testimonial">›</button>
+        </div>
+      </div>
+
+      <div class="carousel-track" id="testimonial-track" tabindex="0" aria-label="Student testimonials carousel">
+        <blockquote class="testimonial-card">
+          <img src="student-1.jpg" alt="Sarah M." class="testimonial-img">
+          <div class="testimonial-content">
+            <p>"After 3 months of weekly classes, I held a 40-minute conversation in Madrid without switching to
+              English."</p>
+            <footer class="testimonial-author">— <strong>Sarah M.</strong> · Conversational Spanish</footer>
+          </div>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <img src="student-2.jpg" alt="David R." class="testimonial-img">
+          <div class="testimonial-content">
+            <p>"I used to freeze every time a native speaker talked fast. Patient corrections and real-life topics made
+              all the difference."</p>
+            <footer class="testimonial-author">— <strong>David R.</strong> · 2x/week Plan</footer>
+          </div>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <img src="student-3.jpg" alt="Hannah L." class="testimonial-img">
+          <div class="testimonial-content">
+            <p>"No endless grammar worksheets—just practical speaking and clear notes I can review before my next
+              session."</p>
+            <footer class="testimonial-author">— <strong>Hannah L.</strong> · Beginner to Intermediate</footer>
+          </div>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <img src="student-4.jpg" alt="Kevin T." class="testimonial-img">
+          <div class="testimonial-content">
+            <p>"Flexible scheduling and super clear explanations. In two months I went from nervous greetings to
+              ordering and chatting with ease."</p>
+            <footer class="testimonial-author">— <strong>Kevin T.</strong> · Travel &amp; Fluency</footer>
+          </div>
+        </blockquote>
+      </div>
+
+      <div class="carousel-dots" id="testimonial-dots" aria-label="Testimonial slides"></div>
+
+      <script>
+        (function () {
+          const track = document.getElementById('testimonial-track');
+          const cards = Array.from(track.querySelectorAll('.testimonial-card'));
+          const prevBtn = document.getElementById('prev-testimonial');
+          const nextBtn = document.getElementById('next-testimonial');
+          const dotsContainer = document.getElementById('testimonial-dots');
+
+          if (!track || cards.length === 0) return;
+
+          const AUTOPLAY_DELAY = 5000;
+          let currentIndex = 0;
+          let autoplayTimer = null;
+          let isPaused = false;
+
+          const dots = cards.map((_, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+            dot.addEventListener('click', () => {
+              goToSlide(index);
+              restartAutoplay();
+            });
+            dotsContainer.appendChild(dot);
+            return dot;
+          });
+
+          function updateUI(index) {
+            currentIndex = index;
+            dots.forEach((dot, i) => {
+              dot.classList.toggle('active', i === currentIndex);
+            });
+          }
+
+          function goToSlide(index) {
+            const total = cards.length;
+            const targetIndex = ((index % total) + total) % total;
+            track.scrollTo({
+              left: cards[targetIndex].offsetLeft - track.offsetLeft,
+              behavior: 'smooth'
+            });
+            updateUI(targetIndex);
+          }
+
+          function startAutoplay() {
+            stopAutoplay();
+            autoplayTimer = setInterval(() => {
+              if (!isPaused) {
+                goToSlide(currentIndex + 1);
+              }
+            }, AUTOPLAY_DELAY);
+          }
+
+          function stopAutoplay() {
+            if (autoplayTimer) {
+              clearInterval(autoplayTimer);
+              autoplayTimer = null;
+            }
+          }
+
+          function restartAutoplay() {
+            startAutoplay();
+          }
+
+          prevBtn.addEventListener('click', () => {
+            goToSlide(currentIndex - 1);
+            restartAutoplay();
+          });
+
+          nextBtn.addEventListener('click', () => {
+            goToSlide(currentIndex + 1);
+            restartAutoplay();
+          });
+
+          let scrollTimeout;
+          track.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+              const trackLeft = track.scrollLeft;
+              let closestIndex = 0;
+              let minDistance = Infinity;
+
+              cards.forEach((card, index) => {
+                const distance = Math.abs(card.offsetLeft - track.offsetLeft - trackLeft);
+                if (distance < minDistance) {
+                  minDistance = distance;
+                  closestIndex = index;
+                }
+              });
+
+              updateUI(closestIndex);
+            }, 80);
+          });
+
+          ['mouseenter', 'focusin', 'touchstart'].forEach((evt) => {
+            track.addEventListener(evt, () => { isPaused = true; }, { passive: true });
+            prevBtn.addEventListener(evt, () => { isPaused = true; }, { passive: true });
+            nextBtn.addEventListener(evt, () => { isPaused = true; }, { passive: true });
+          });
+
+          ['mouseleave', 'focusout', 'touchend'].forEach((evt) => {
+            track.addEventListener(evt, () => { isPaused = false; }, { passive: true });
+            prevBtn.addEventListener(evt, () => { isPaused = false; }, { passive: true });
+            nextBtn.addEventListener(evt, () => { isPaused = false; }, { passive: true });
+          });
+
+          startAutoplay();
+        })();
+      </script>
+    </section>
+
+    <!-- 4. PLANES -->
+    <section id="plans">
+      <h2>Simple monthly plans</h2>
+      <div class="pricing-grid">
+        <div class="plan-card">
+          <div>
+            <h3>Steady Progress</h3>
+            <p>1 class per week (4/month)</p>
+          </div>
+          <div>
+            <span class="price">$60</span>/mo
+            <a href="#checkout-60" class="btn">Select</a>
+          </div>
+        </div>
+
+        <div class="plan-card featured">
+          <div>
+            <h3>Fluency Builder (Most Popular)</h3>
+            <p>2 classes per week (8/month)</p>
+          </div>
+          <div>
+            <span class="price">$112</span>/mo
+            <a href="#checkout-112" class="btn">Select</a>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div>
+            <h3>Full Immersion</h3>
+            <p>3 classes per week (12/month)</p>
+          </div>
+          <div>
+            <span class="price">$156</span>/mo
+            <a href="#checkout-156" class="btn">Select</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. GARANTÍA -->
+    <section>
+      <h3>100% Risk-Free First Week Guarantee</h3>
+      <p>If after your first session you feel my teaching style isn't the right fit, email me within 48 hours for a full
+        refund—no questions asked.</p>
+    </section>
+
+    <footer>
+      <p>© 2026 Spanish Coaching • Refund Policy • Contact</p>
+    </footer>
+  </main>
+</body>
+
+</html>
